@@ -24,10 +24,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[k] != '%')
 		{
-			buffer[(buff_index++)] = format[i];
+			buffer[(buff_index++)] = format[k];
 			if (buff_index == BUFF_SIZE)
 				/* buff_index = 1024(max) */
-				prints_buffer(buffer, &buff_ind);
+				prints_buffer(buffer, &buff_index);
 			/* write(1, &format[k], 1);*/
 			printed_letters++;
 		}
