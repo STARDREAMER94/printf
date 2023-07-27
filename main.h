@@ -43,8 +43,8 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+int handle_print(const char *fmt, int *k,
+va_list ap, char buffer[], int flags, int width, int precision, int size);
 
 
 /****************** FUNCTIONS ******************/
@@ -83,10 +83,10 @@ int print_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funciotns to handle other specifiers */
-int get_flags(const char *format, int *i);
-int get_width(const char *format, int *i, va_list list);
-int get_precision(const char *format, int *i, va_list list);
-int get_size(const char *format, int *i);
+int get_flags(const char *format, int *k);
+int get_width(const char *format, int *k, va_list ap);
+int get_precision(const char *format, int *k, va_list ap);
+int get_size(const char *format, int *k);
 
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
@@ -111,9 +111,9 @@ char buffer[],
 	int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
-int is_printable(char);
+int is_printable(char c);
 int append_hexa_code(char, char[], int);
-int is_digit(char);
+int is_digit(char c);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
