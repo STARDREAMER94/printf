@@ -15,7 +15,7 @@ int prints_pointers(va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char extra_ch = 0, note = ' ';
-	int index = BUFF_SIZE - 2, length = 2, note_start = 1;
+	int j, index = BUFF_SIZE - 2, length = 2, note_start = 1;
 	/* length=2, for '0x' */
 	unsigned long num_address;
 	char map_to[] = "0123456789abcdef";
@@ -47,10 +47,10 @@ int prints_pointers(va_list list, char buffer[],
 		extra_ch = ' ', length++;
 
 	index++;
-
+	j = writes_pointers(buffer, index, length,
+                width, flags, note, extra_ch, note_start);
 	/*return (write(1, &buffer[k], BUFF_SIZE - k - 1));*/
-	return (writes_pointers(buffer, index, length,
-		width, flags, note, extra_ch, note_start));
+	return (j);
 }
 
 /************************* PRINT NON PRINTABLE *************************/

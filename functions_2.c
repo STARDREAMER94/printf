@@ -1,6 +1,5 @@
 #include "main.h"
 
-typedef int make_iso_complier_happy;
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
  * prints_unsigned - Prints an unsigned number
