@@ -40,7 +40,7 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int printing_handler(const char *format, int *index, va_list ap,
+int printing_handler(const char *fmt, int *index, va_list ap,
 char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
@@ -97,7 +97,7 @@ int writes_chars(char ch, char buffer[],
 int writes_nums(int index, char buffer[],
 	int flags, int width, int precision,
 	int length, char pad, char extra_char);
-int write_number(int is_neg, int index, char buffer[],
+int writes_numbers(int is_neg, int index, char buffer[],
 	int flags, int width, int precision, int size);
 int writes_unsignd(int is_neg, int index, char buffer[],
 	int flags, int width, int precision, int size);

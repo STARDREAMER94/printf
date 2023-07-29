@@ -67,7 +67,7 @@ int non_printable_print(va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int k = 0, offset = 0;
-	char *str = va_arg(types, char *);
+	char *str = va_arg(list, char *);
 
 	UNUSED(flags);
 	UNUSED(width);

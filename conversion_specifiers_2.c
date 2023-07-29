@@ -137,7 +137,7 @@ int print_hex(va_list list, char map_to[], char buffer[],
 int hexadec_print(va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	return (hex_print(list, "0123456789abcdef", buffer,
+	return (print_hex(list, "0123456789abcdef", buffer,
 		flags, 'x', width, precision, size));
 }
 
@@ -155,7 +155,8 @@ int hexadec_print(va_list list, char buffer[],
 int hex_upper_print(va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	return (hex_print(types, "0123456789ABCDEF", buffer,
+	return (print_hex(list, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precision, size));
 }
+
 

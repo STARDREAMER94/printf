@@ -115,7 +115,7 @@ int writes_nums(int id, char buffer[], int flags, int width, int pcn,
  *
  * Return: Number of chars printed.
  */
-int write_number(int is_neg, int index, char buffer[],
+int writes_numbers(int is_neg, int index, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - index - 1;

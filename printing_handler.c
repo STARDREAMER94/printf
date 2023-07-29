@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * printing_handler - Prints an argument based on its type
- * @format: Formatted string in which to print the arguments.
+ * @fmt: Formatted string in which to print the arguments.
  * @ap: List of arguments to be printed.
  * @index: index.
  * @buffer: Buffer array to handle print.
@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: 1 or 2;
  */
-int printing_handler(const char *format, int *index, va_list ap,
+int printing_handler(const char *fmt, int *index, va_list ap,
 char buffer[], int flags, int width, int precision, int size)
 {
 	int k, unknown_length = 0, printed_ch = -1;
